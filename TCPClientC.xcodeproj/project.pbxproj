@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920643231E2EC72B0058649A /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 920643211E2EC72B0058649A /* errors.c */; };
 		923C48C41E2BEB7F005A400C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48C31E2BEB7F005A400C /* main.c */; };
+		923C48CC1E2BF3F2005A400C /* TCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CA1E2BF3F2005A400C /* TCPClient.c */; };
+		923C48CF1E2C038E005A400C /* helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CD1E2C038E005A400C /* helpers.c */; };
+		923C48D21E2C0481005A400C /* testTCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48D01E2C0481005A400C /* testTCPClient.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		920643211E2EC72B0058649A /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
+		920643221E2EC72B0058649A /* errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
+		920643251E302C900058649A /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = info.plist; path = TCPClientC/info.plist; sourceTree = "<group>"; };
 		923C48C01E2BEB7F005A400C /* TCPClientC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCPClientC; sourceTree = BUILT_PRODUCTS_DIR; };
 		923C48C31E2BEB7F005A400C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		923C48CA1E2BF3F2005A400C /* TCPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCPClient.c; sourceTree = "<group>"; };
+		923C48CB1E2BF3F2005A400C /* TCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPClient.h; sourceTree = "<group>"; };
+		923C48CD1E2C038E005A400C /* helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = helpers.c; sourceTree = "<group>"; };
+		923C48CE1E2C038E005A400C /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		923C48D01E2C0481005A400C /* testTCPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testTCPClient.c; sourceTree = "<group>"; };
+		923C48D11E2C0481005A400C /* testTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testTCPClient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,7 @@
 		923C48B71E2BEB7F005A400C = {
 			isa = PBXGroup;
 			children = (
+				920643251E302C900058649A /* info.plist */,
 				923C48C21E2BEB7F005A400C /* TCPClientC */,
 				923C48C11E2BEB7F005A400C /* Products */,
 			);
@@ -58,6 +72,14 @@
 			isa = PBXGroup;
 			children = (
 				923C48C31E2BEB7F005A400C /* main.c */,
+				923C48CE1E2C038E005A400C /* helpers.h */,
+				923C48CD1E2C038E005A400C /* helpers.c */,
+				920643221E2EC72B0058649A /* errors.h */,
+				920643211E2EC72B0058649A /* errors.c */,
+				923C48D11E2C0481005A400C /* testTCPClient.h */,
+				923C48D01E2C0481005A400C /* testTCPClient.c */,
+				923C48CB1E2BF3F2005A400C /* TCPClient.h */,
+				923C48CA1E2BF3F2005A400C /* TCPClient.c */,
 			);
 			path = TCPClientC;
 			sourceTree = "<group>";
@@ -119,7 +141,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923C48CC1E2BF3F2005A400C /* TCPClient.c in Sources */,
+				923C48CF1E2C038E005A400C /* helpers.c in Sources */,
+				923C48D21E2C0481005A400C /* testTCPClient.c in Sources */,
 				923C48C41E2BEB7F005A400C /* main.c in Sources */,
+				920643231E2EC72B0058649A /* errors.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +195,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = cConnect;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -209,6 +236,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = cConnect;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -216,6 +244,8 @@
 		923C48C81E2BEB7F005A400C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/TCPClientC/info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +253,8 @@
 		923C48C91E2BEB7F005A400C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/TCPClientC/info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +278,7 @@
 				923C48C91E2BEB7F005A400C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
