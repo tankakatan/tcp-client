@@ -51,6 +51,6 @@ long withErrorTest (long value, int errorValue, enum Error errorType) {
     errorDescription (errorType, description);
     assert ((value != errorValue), description);
     
-    free (description);
+    free(description);
     return value;
 }

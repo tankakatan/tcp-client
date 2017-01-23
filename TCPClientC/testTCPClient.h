@@ -15,6 +15,7 @@
 
 #define TEST_IP "62.152.60.244"
 #define TEST_PORT (uint16_t)80
+#define TEST_PORT_STRING "80"
 
 
 int test ();

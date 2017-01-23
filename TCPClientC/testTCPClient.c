@@ -72,7 +72,7 @@ int testSend () {
     
     char *message = malloc (sizeof (char) * 128);
     int headersCreated = headerWithHost (TEST_IP, message);
-    if (headersCreated == -1) {
+    if (headersCreated == DUMMY_ERROR) {
         return 0;
     }
     
@@ -90,7 +90,7 @@ int testSend () {
 
 int testResponse () {
     
-    int socket = connectTo (TEST_IP, "80");
+    int socket = connectTo (TEST_IP, TEST_PORT_STRING);
 
     char *message = malloc (bufferSize);
     headerWithHost (TEST_IP, message);

@@ -11,6 +11,10 @@
 
 #include <stdio.h>
 
+
+#define DUMMY_ERROR -1
+
+
 static const char *dummyHTTPHeaderFormat =
     "GET / HTTP/1.1\r\n"
     "Host: %s\r\n\r\n";

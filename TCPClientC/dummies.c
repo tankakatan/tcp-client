@@ -14,8 +14,6 @@
 
 #include "errors.h"
 
-#define DUMMY_ERROR -1
-
 int headerWithHost (const char *host, char *headers) {
     return (int)withErrorTest (sprintf (headers, dummyHTTPHeaderFormat, host), DUMMY_ERROR, 0);
 }
