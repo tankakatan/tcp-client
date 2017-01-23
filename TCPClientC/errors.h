@@ -27,7 +27,7 @@ enum Error {
 
 
 void assert (int test, const char *description);
-const char *errorDescription (int code);
+void errorDescription (int code, char *description);
 long withErrorTest (long value, int errorValue, enum Error errorType);
 
 

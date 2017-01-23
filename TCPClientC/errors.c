@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 
-const char *errorDescription (int code) {
+void errorDescription (int code, char *description) {
     
     char *type;
     switch (code) {
@@ -30,10 +30,9 @@ const char *errorDescription (int code) {
         default                     : type = "Unknown";             break;
     }
     
-    static char description[128];
+//    static char description[128];
     sprintf (description, "Error %d: %s failed", code, type);
-    
-    return description;
+    return;
 }
 
 
@@ -47,6 +46,11 @@ void assert (int test, const char *description) {
 long withErrorTest (long value, int errorValue, enum Error errorType) {
     
 //    printf ("Testing if %d\t==\t%d\t\t=> %d\n", value, to, value == to);
-    assert ((value != errorValue), errorDescription (errorType));
+    
+    char *description = malloc (sizeof (char) * 128);
+    errorDescription (errorType, description);
+    assert ((value != errorValue), description);
+    
+    free (description);
     return value;
 }
