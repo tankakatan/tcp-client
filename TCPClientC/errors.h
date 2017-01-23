@@ -6,6 +6,7 @@
 //  Copyright © 2017 Den V Design. All rights reserved.
 //
 
+
 #ifndef errors_h
 #define errors_h
 
@@ -13,15 +14,21 @@
 
 
 enum Error {
-    SocketError = 121,
-    AddressConversionError = 144,
-    PortConversionError = 169,
-    ConnectionError = 196,
-    ApplicationError = 225,
+    SocketOpenError         = 121,
+    SocketCloseError        = 144,
+    AddressConversionError  = 169,
+    PortConversionError     = 196,
+    ConnectionError         = 225,
+    HeaderCreation          = 256,
+    SendingError            = 289,
+    ResponseError           = 324,
+    ApplicationError        = 361,
 };
 
 
-void reportError (int code);
-int reportIfEqual (int value, int systemCode, enum Error errorType);
+void assert (int test, const char *description);
+const char *errorDescription (int code);
+long withErrorTest (long value, int errorValue, enum Error errorType);
+
 
 #endif /* errors_h */

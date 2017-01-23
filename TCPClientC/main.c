@@ -15,36 +15,34 @@
 #include "testTCPClient.h"
 #include "helpers.h"
 #include "errors.h"
+#include "dummies.h"
 
-#define DEBUG 0
+
+//#ifndef DEBUG
+//#define DEBUG 0
+//#endif
+
 
 int main(int argc, const char *argv[]) {
     
     
 #ifdef DEBUG
-    if (DEBUG) {
-#endif
+    
+    if (DEBUG != 0) {
         printArgs (argc, argv);
         if (test () == 0) { return 0; }
-#ifdef DEBUG
     }
+
 #endif
     
-    if (countCStrings (argv, argc*(sizeof (const char *))) < 3) {
-        printf ("Missing parameters. Please provide IP address and Port number.\n\n");
+    if (argc < 3) {
+        printf ("Missing parameters.\n"
+                "Please provide an IP address and a "
+                "Port number for connection.\n\n");
 
     } else {
-
-        const char *address = argv[1];
-        int port = atoi (argv[2]);
-
-        printf ("Connecting to %s port %d...\n", address, port);
-        int connection = connectTo (address, port);
-        if (connection != CONNECTION_ERROR) {
-            printf ("Connection opened at %s port %d\n", address, port);
-            sleep (16);
-            printf ("Connection closed.\n\n");
-        }
+        
+        sendDummy (argv[1], argv[2]);
     }
     
     return 0;

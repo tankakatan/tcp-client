@@ -6,6 +6,7 @@
 //  Copyright © 2017 Den V Design. All rights reserved.
 //
 
+
 #include "helpers.h"
 
 #include <errno.h>
@@ -27,6 +28,7 @@ void printArgs (int argc, cString argv[]) {
     printf ("\n");
 }
 
+
 void foreachString (cString *strings, CStringHandler call) {
     int count = 0;
     while (strings[count] != 0) {
@@ -35,7 +37,8 @@ void foreachString (cString *strings, CStringHandler call) {
     }
 }
 
-int count (void *array, size_t size, size_t itemSize, const char *format) {
+
+int count (const void *array, size_t size, size_t itemSize, const char *format) {
     
     size_t total = size / itemSize;
 //    for (size_t i = 0; i < total; i++) {
@@ -46,15 +49,18 @@ int count (void *array, size_t size, size_t itemSize, const char *format) {
     return (int)total;
 }
 
-int countInt (int *array, size_t size) {
+
+int countInt (const int *array, size_t size) {
     
     return count (array, size, sizeof (int), "%d, ");
 }
+
 
 int countChar (const char *array, size_t size) {
     
     return count ((char *)array, size, sizeof (char), "%a, ");
 }
+
 
 int countCStrings (const char **array, size_t size) {
     

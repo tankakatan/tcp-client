@@ -10,10 +10,12 @@
 #ifndef helpers_h
 #define helpers_h
 
-typedef const char *cString;
-typedef void (*CStringHandler)(cString, int);
 
 #include <stdio.h>
+
+
+typedef const char *cString;
+typedef void (*CStringHandler)(cString, int);
 
 
 void printError (cString name);
@@ -22,8 +24,9 @@ void printInOrder (cString, int count);
 
 void foreachString (cString *strings, CStringHandler);
 
-int countInt (int *array, size_t size);
+int countInt (const int *array, size_t size);
 int countChar (const char *array, size_t size);
 int countCStrings (const char **array, size_t size);
+
 
 #endif /* helpers_h */

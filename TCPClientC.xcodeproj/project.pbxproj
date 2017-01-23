@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920643231E2EC72B0058649A /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 920643211E2EC72B0058649A /* errors.c */; };
+		920643281E314FDD0058649A /* dummies.c in Sources */ = {isa = PBXBuildFile; fileRef = 920643261E314FDD0058649A /* dummies.c */; };
 		923C48C41E2BEB7F005A400C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48C31E2BEB7F005A400C /* main.c */; };
 		923C48CC1E2BF3F2005A400C /* TCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CA1E2BF3F2005A400C /* TCPClient.c */; };
 		923C48CF1E2C038E005A400C /* helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CD1E2C038E005A400C /* helpers.c */; };
@@ -30,6 +31,8 @@
 		920643211E2EC72B0058649A /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
 		920643221E2EC72B0058649A /* errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
 		920643251E302C900058649A /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = info.plist; path = TCPClientC/info.plist; sourceTree = "<group>"; };
+		920643261E314FDD0058649A /* dummies.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dummies.c; sourceTree = "<group>"; };
+		920643271E314FDD0058649A /* dummies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummies.h; sourceTree = "<group>"; };
 		923C48C01E2BEB7F005A400C /* TCPClientC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCPClientC; sourceTree = BUILT_PRODUCTS_DIR; };
 		923C48C31E2BEB7F005A400C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		923C48CA1E2BF3F2005A400C /* TCPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCPClient.c; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				923C48D01E2C0481005A400C /* testTCPClient.c */,
 				923C48CB1E2BF3F2005A400C /* TCPClient.h */,
 				923C48CA1E2BF3F2005A400C /* TCPClient.c */,
+				920643271E314FDD0058649A /* dummies.h */,
+				920643261E314FDD0058649A /* dummies.c */,
 			);
 			path = TCPClientC;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				923C48CF1E2C038E005A400C /* helpers.c in Sources */,
 				923C48D21E2C0481005A400C /* testTCPClient.c in Sources */,
 				923C48C41E2BEB7F005A400C /* main.c in Sources */,
+				920643281E314FDD0058649A /* dummies.c in Sources */,
 				920643231E2EC72B0058649A /* errors.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
