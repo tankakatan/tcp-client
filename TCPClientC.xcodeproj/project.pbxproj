@@ -13,6 +13,7 @@
 		923C48CC1E2BF3F2005A400C /* TCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CA1E2BF3F2005A400C /* TCPClient.c */; };
 		923C48CF1E2C038E005A400C /* helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48CD1E2C038E005A400C /* helpers.c */; };
 		923C48D21E2C0481005A400C /* testTCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 923C48D01E2C0481005A400C /* testTCPClient.c */; };
+		929D21A41E48FB5700A303CF /* Buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 929D21A21E48FB5700A303CF /* Buffer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		923C48CE1E2C038E005A400C /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		923C48D01E2C0481005A400C /* testTCPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testTCPClient.c; sourceTree = "<group>"; };
 		923C48D11E2C0481005A400C /* testTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testTCPClient.h; sourceTree = "<group>"; };
+		929D21A21E48FB5700A303CF /* Buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Buffer.c; sourceTree = "<group>"; };
+		929D21A31E48FB5700A303CF /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				923C48D01E2C0481005A400C /* testTCPClient.c */,
 				923C48CB1E2BF3F2005A400C /* TCPClient.h */,
 				923C48CA1E2BF3F2005A400C /* TCPClient.c */,
+				929D21A21E48FB5700A303CF /* Buffer.c */,
+				929D21A31E48FB5700A303CF /* Buffer.h */,
 				920643271E314FDD0058649A /* dummies.h */,
 				920643261E314FDD0058649A /* dummies.c */,
 			);
@@ -150,6 +155,7 @@
 				923C48CF1E2C038E005A400C /* helpers.c in Sources */,
 				923C48D21E2C0481005A400C /* testTCPClient.c in Sources */,
 				923C48C41E2BEB7F005A400C /* main.c in Sources */,
+				929D21A41E48FB5700A303CF /* Buffer.c in Sources */,
 				920643281E314FDD0058649A /* dummies.c in Sources */,
 				920643231E2EC72B0058649A /* errors.c in Sources */,
 			);

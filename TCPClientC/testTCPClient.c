@@ -95,24 +95,41 @@ int testResponse () {
     char *message = malloc (bufferSize);
     headerWithHost (TEST_IP, message);
     sendCString (socket, message, bufferSize);
+
+    Buffer buffer;
+    initBuffer (&buffer, INITIAL_BUFFER_LENGTH);
     
-    char *response = malloc (bufferSize);
-    size_t received = getResponse (socket, response, bufferSize);
+    getResponse (socket, &buffer);
+    
+    printf ("Receiving message: %ld, of %ld \n\n", buffer.used, buffer.length);
     
     closeSocket (socket);
     free (message);
-    free (response);
+    free (buffer.value);
     
-    return received != -1;
+    return buffer.used != -1;
 }
 
 
-static const Test tests[5] = {
-    testSocket,
-    testAddress,
-    testConnection,
-    testSend,
+int testGetIPAddress () {
+    char *address = 0;
+    int length = getIPAddress (address, "google.com");
+    if (length <= 0) {
+        return 0;
+    }
+
+    return 1;
+
+}
+
+
+static const Test tests[2] = {
+//    testSocket,
+//    testAddress,
+//    testConnection,
+//    testSend,
     testResponse,
+    testGetIPAddress,
 };
 
 

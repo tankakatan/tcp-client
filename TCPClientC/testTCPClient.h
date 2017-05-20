@@ -14,8 +14,12 @@
 #include <stdio.h>
 
 #define TEST_IP "62.152.60.244"
-#define TEST_PORT (uint16_t)80
+#define TEST_PORT DEFAULT_PORT
 #define TEST_PORT_STRING "80"
+
+//#define TEST_IP "127.0.0.1"
+//#define TEST_PORT (uint16_t)8000
+//#define TEST_PORT_STRING "8000"
 
 
 int test ();

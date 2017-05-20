@@ -18,32 +18,28 @@
 #include "dummies.h"
 
 
-//#ifndef DEBUG
-//#define DEBUG 0
-//#endif
-
-
 int main(int argc, const char *argv[]) {
     
     
 #ifdef DEBUG
     
-    if (DEBUG != 0) {
-        printArgs (argc, argv);
-        if (test () == 0) { return 0; }
-    }
+  if (DEBUG != 0) {
+    printArgs (argc, argv);
+//    if (test () == 0) { return 0; }
+    sendDummy (TEST_IP, TEST_PORT_STRING);
+  }
 
 #endif
     
-    if (argc < 3) {
-        printf ("Missing parameters.\n"
-                "Please provide an IP address and a "
-                "Port number for connection.\n\n");
+  if (argc < 2) {
+    printf ("Missing parameters.\n"
+            "Please provide an IP address and a "
+            "Port number to connect to.\n\n");
 
-    } else {
-        
-        sendDummy (argv[1], argv[2]);
-    }
-    
-    return 0;
+  } else {
+      
+    sendDummy (argv[1], argv[2] ? argv[2] : DEFAULT_PORT_STRING);
+  }
+  
+  return 0;
 }

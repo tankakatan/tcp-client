@@ -15,5 +15,6 @@
 #include "errors.h"
 
 int headerWithHost (const char *host, char *headers) {
-    return (int)withErrorTest (sprintf (headers, dummyHTTPHeaderFormat, host), DUMMY_ERROR, 0);
+    return (int)withErrorTest (sprintf (headers, dummyHTTPRequestFormat, host),
+                               DUMMY_ERROR, 0);
 }
